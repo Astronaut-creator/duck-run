@@ -1,0 +1,65 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable type="KIND_SpriteKind" id="Z[?AHSggbQ0tbO2,=Gi{">Player</variable><variable type="KIND_SpriteKind" id="7|grJn(HNmV|dMcR1gMC">Projectile</variable><variable type="KIND_SpriteKind" id="HMXt@#CzQpcOx2n,uv7-">Food</variable><variable type="KIND_SpriteKind" id="#`/hM7Bqr2fkh;7uSvG{">Enemy</variable><variable type="BLOCKLY_TILESET_TYPE" id="mth4*{O4%/78k$vSjx~U">0;16;16;0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</variable><variable id="@7Zte]h{n/Aqpg?elyIH">Duck</variable><variable id=";:BQX`:Op|0j*Zr1gXFF">Attacker</variable></variables><block type="pxt-on-start" x="390" y="0"><statement name="HANDLER"><block type="variables_set"><field name="VAR" id="@7Zte]h{n/Aqpg?elyIH">Duck</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+. . . . . . . . . . b 5 b . . . 
+. . . . . . . . . b 5 b . . . . 
+. . . . . . . . . b c . . . . . 
+. . . . . . b b b b b b . . . . 
+. . . . . b b 5 5 5 5 5 b . . . 
+. . . . b b 5 d 1 f 5 5 d f . . 
+. . . . b 5 5 1 f f 5 d 4 c . . 
+. . . . b 5 5 d f b d d 4 4 . . 
+b d d d b b d 5 5 5 4 4 4 4 4 b 
+b b d 5 5 5 b 5 5 4 4 4 4 4 b . 
+b d c 5 5 5 5 d 5 5 5 5 5 b . . 
+c d d c d 5 5 b 5 5 5 5 5 5 b . 
+c b d d c c b 5 5 5 5 5 5 5 b . 
+. c d d d d d d 5 5 5 5 5 d b . 
+. . c b d d d d d 5 5 5 b b . . 
+. . . c c c c c c c c b b . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="ctrlgame_control_sprite"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><field name="controller">controller.player1</field><value name="sprite"><block type="variables_get"><field name="VAR" id="@7Zte]h{n/Aqpg?elyIH">Duck</field></block></value><next><block type="hudSetLife"><value name="value"><shadow type="math_number"><field name="NUM">3</field></shadow></value><next><block type="tilemap_editor"><field name="tilemap">tiles.createTilemap(
+            hex`1000100001060606060606060606060606060602050000000009000000000000000000070500090900090009090909090909000705000909000000090009000000090007050000090000090900090009090900070509090900090900000900000909000705000000000900000009090009000007050009090009000900000000090909070500000900000000000009000000000705090909090900090909090009090007050000000009000900000000000900070500090900090009000909000909000705000900000900090009000000000007050009000909000900090909090900070500000000000009000000000009000704080808080808080808080808080803`,
+            img`
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 . . . . 2 . . . . . . . . . 2 
+2 . 2 2 . 2 . 2 2 2 2 2 2 2 . 2 
+2 . 2 2 . . . 2 . 2 . . . 2 . 2 
+2 . . 2 . . 2 2 . 2 . 2 2 2 . 2 
+2 2 2 2 . 2 2 . . 2 . . 2 2 . 2 
+2 . . . . 2 . . . 2 2 . 2 . . 2 
+2 . 2 2 . 2 . 2 . . . . 2 2 2 2 
+2 . . 2 . . . . . . 2 . . . . 2 
+2 2 2 2 2 2 . 2 2 2 2 . 2 2 . 2 
+2 . . . . 2 . 2 . . . . . 2 . 2 
+2 . 2 2 . 2 . 2 . 2 2 . 2 2 . 2 
+2 . 2 . . 2 . 2 . 2 . . . . . 2 
+2 . 2 . 2 2 . 2 . 2 2 2 2 2 . 2 
+2 . . . . . . 2 . . . . . 2 . 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+`,
+            [myTiles.tile0,sprites.castle.tilePath1,sprites.castle.tilePath3,sprites.castle.tilePath9,sprites.castle.tilePath7,sprites.castle.tilePath4,sprites.castle.tilePath2,sprites.castle.tilePath6,sprites.castle.tilePath8,sprites.castle.tilePath5,sprites.dungeon.stairEast,sprites.dungeon.stairSouth],
+            TileScale.Sixteen
+        )</field><next><block type="mapplaceonrandomtile"><value name="sprite"><block type="variables_get"><field name="VAR" id="@7Zte]h{n/Aqpg?elyIH">Duck</field></block></value><value name="tile"><shadow type="tileset_tile_picker"><field name="tile">myTiles.tile0</field></shadow></value><next><block type="variables_set"><field name="VAR" id=";:BQX`:Op|0j*Zr1gXFF">Attacker</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . 2 f e e e e . . . . 
+. . . . . . . . . . . . . 2 2 2 f e e e e . . . 
+. . . . . . . . . . . . . e e e e f f e e e . . 
+. . . . . . . . d . . . e 2 2 2 2 e e f f f . . 
+. . . . . . . . d d . . 2 e f f f f 2 2 2 e . . 
+. . . . . . . . . d d c f f e e e f f f f f . . 
+. . . . . . . . . . d d c e 4 4 f b e 4 4 e . . 
+. . . . . . . . . . . d c e d d f 1 4 d 4 e e . 
+. . . . . . . . . . . c c d e d d d 4 e e e . . 
+. . . . . . . . . . . e d d 4 e 4 4 e e . . . . 
+. . . . . . . . . . . . e e 4 4 2 2 2 2 . . . . 
+. . . . . . . . . . . . . . 2 e 2 2 2 2 . . . . 
+. . . . . . . . . . . . . . 5 5 4 4 4 4 . . . . 
+. . . . . . . . . . . . . . f f f f f f . . . . 
+. . . . . . . . . . . . . . . . f f f . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="ctrlgame_control_sprite"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><field name="controller">controller.player2</field><value name="sprite"><block type="variables_get"><field name="VAR" id=";:BQX`:Op|0j*Zr1gXFF">Attacker</field></block></value><next><block type="mapplaceonrandomtile"><value name="sprite"><block type="variables_get"><field name="VAR" id=";:BQX`:Op|0j*Zr1gXFF">Attacker</field></block></value><value name="tile"><shadow type="tileset_tile_picker"><field name="tile">myTiles.tile0</field></shadow></value><next><block type="camerafollow"><value name="sprite"><block type="variables_get"><field name="VAR" id=";:BQX`:Op|0j*Zr1gXFF">Attacker</field></block></value></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block><block type="spritesoverlap" x="0" y="70"><value name="HANDLER_DRAG_PARAM_sprite"><shadow type="argument_reporter_custom"><mutation typename="Sprite"/><field name="VALUE">sprite</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">Player</field></shadow></value><value name="HANDLER_DRAG_PARAM_otherSprite"><shadow type="argument_reporter_custom"><mutation typename="Sprite"/><field name="VALUE">otherSprite</field></shadow></value><value name="otherKind"><shadow type="spritekind"><field name="MEMBER">Player</field></shadow></value><statement name="HANDLER"><block type="hudChangeLifeBy"><value name="value"><shadow type="math_number"><field name="NUM">-1</field></shadow></value><next><block type="mapplaceonrandomtile"><value name="sprite"><block type="variables_get"><field name="VAR" id="@7Zte]h{n/Aqpg?elyIH">Duck</field></block></value><value name="tile"><shadow type="tileset_tile_picker"><field name="tile">myTiles.tile0</field></shadow></value><next><block type="mapplaceonrandomtile"><value name="sprite"><block type="variables_get"><field name="VAR" id=";:BQX`:Op|0j*Zr1gXFF">Attacker</field></block></value><value name="tile"><shadow type="tileset_tile_picker"><field name="tile">myTiles.tile0</field></shadow></value></block></next></block></next></block></statement></block><block type="gamelifeevent" x="60" y="370"><statement name="HANDLER"><block type="gameOver"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="win"><shadow type="toggleWinLose"><field name="win">false</field></shadow></value></block></statement></block></xml>
